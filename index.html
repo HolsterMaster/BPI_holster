@@ -1,103 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office"
-      xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Unsere Website</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasse BPI‑b (10. Klasse)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-
-<a class="logo">
-    <img src="img/.png" alt="Logo"> <!-- LOGO -->
-
-</a>
-
-<div class="hero-section">
-    <div class="section-center">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h1>BPI<br>Gruppe B</h1> <!-- NAME -->
+<header>
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <ul>
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#texts">Unsere Texte</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="hero">
+        <div class="content">
+            <h1>Willkommen bei BPI‑b!</h1>
+            <p>10. Klasse in der Schweiz – lerne unser Schulleben kennen.</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>Über uns</h2>
+        <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto der Klasse" style="border-radius:50%;width:200px;height:200px;object-fit:cover;margin:20px auto;display:block;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+    </section>
+    <section id="texts">
+        <h2>Unsere Texte</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Text 1">
+                <div class="card-body">
+                    <h4>Text №1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio...</p>
                 </div>
-
-                <div class="col-12 text-center">
-                    <p>
-                        <span class="about button">Über uns</span>
-                        <span class="hobby button">Unser hobby</span>
-                    </p>
+            </div>
+            <div class="card">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Text 2">
+                <div class="card-body">
+                    <h4>Text №2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero...</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Text 3">
+                <div class="card-body">
+                    <h4>Text №3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante...</p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<div class="about-section">
-    <div class="about-close"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h3>Über uns</h3>
+    </section>
+    <section id="gallery">
+        <h2>Galerie</h2>
+        <div class="cards">
+            <div class="card photo-card" data-description="Erste Aufnahme des Jahres">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 1">
+                <div class="card-body"><p class="desc">Erste Aufnahme...</p></div>
             </div>
-
-            <div class="col-12 text-center about_img">
-                <img src="img/.jpg" alt=""> <!-- Unser Foto -->
+            <div class="card photo-card" data-description="Winterausflug im Schnee">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 2">
+                <div class="card-body"><p class="desc">Winterausflug...</p></div>
             </div>
-            <div class="col-12 mt-3 text-center">
-                <p>Text</p> <!-- Text über uns -->
+            <div class="card photo-card" data-description="Sommerfest Erinnerung">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 3">
+                <div class="card-body"><p class="desc">Sommerfest Er...</p></div>
             </div>
-
-
+            <div class="card photo-card" data-description="Letzter Schultag">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
+                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
+            </div>
+            <div class="card photo-card" data-description="Letzter Schultag">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
+                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
+            </div>
+            <div class="card photo-card" data-description="Letzter Schultag">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
+                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
+            </div>
+            <div class="card photo-card" data-description="Letzter Schultag">
+                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
+                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
+            </div>
         </div>
+    </section>
+</main>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img src="" alt="">
+        <div class="description"></div>
     </div>
 </div>
-</div>
-
-<div class="hobby-section">
-    <div class="hobby-close"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h3>Unser Hobby oder Reisen</h3>
-            </div>
-            <div class="col-12 mt-3 text-center">
-                <p><span>Text</span></p> <!-- Text über Hobby -->
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <img src="img/.jpg" alt=""> <!-- Foto (Hobby) -->
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <img src="img/.jpg" alt=""> <!-- Foto (Hobby) -->
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <img src="img/.jpg" alt=""> <!-- Foto (Hobby) -->
-            </div>
-
-        </div>
-    </div>
-</div>
-
 <footer>
-
-    <a class="icon" href="https://www.instagram.com">
-        <img src="img/instagram.svg" alt="Instagram">
-    </a>
-    <a class="icon" href="https://www.facebook.com">
-        <img src="img/facebook.svg" alt="Facebook">
-    </a>
-    <a class="icon" href="https://www.youtube.com">
-        <img src="img/youtube.svg" alt="Youtube">
-    </a>
+    <p>© 2025 Klasse BPI‑b. Alle Rechte vorbehalten.</p>
 </footer>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src="js/script.js"></script>
-
+<script src="/js/script.js"></script>
 </body>
-
 </html>

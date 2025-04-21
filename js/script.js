@@ -1,27 +1,7 @@
-/* Please ❤ this if you like it! */
-
-
-(function($) { "use strict";
-
-    //Travel portfolio page
-
-    $(".about").on('click', function () {
-        $("body").addClass("about-on");
-    });
-    $(".about-close").on('click', function () {
-        $("body").removeClass("about-on");
-    });
-
-
-    //Wildlife portfolio page
-
-    $(".hobby").on('click', function () {
-        $("body").addClass("hobby-on");
-    });
-    $(".hobby-close").on('click', function () {
-        $("body").removeClass("hobby-on");
-    });
-
-
-
-})(jQuery);
+document.querySelector('.logo img').addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+document.querySelectorAll('.photo-card img').forEach(img => img.addEventListener('click', function() {
+    const modal = document.getElementById('modal'); modal.classList.add('active'); modal.querySelector('img').src = img.src;
+    modal.querySelector('.description').textContent = img.closest('.photo-card').dataset.description;
+}));
+document.querySelectorAll('.modal-close').forEach(btn => btn.addEventListener('click', () => btn.closest('.modal').classList.remove('active')));
+document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.classList.remove('active'); });

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_0" />
+    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_0.0.1 - Micro fix .js">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +51,7 @@
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/PhpstormProjects/BPI_Website&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/PhpstormProjects/readmavv_app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -74,6 +79,10 @@
       <updated>1743020097085</updated>
       <workItem from="1743020097771" duration="2048000" />
       <workItem from="1743023201308" duration="235000" />
+      <workItem from="1743102799963" duration="799000" />
+      <workItem from="1743425133115" duration="38000" />
+      <workItem from="1743425396016" duration="116000" />
+      <workItem from="1745259527706" duration="8571000" />
     </task>
     <task id="LOCAL-00001" summary="GG_0">
       <option name="closed" value="true" />
@@ -91,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743023349585</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GG_0.0.1 - Micro fix .js">
+      <option name="closed" value="true" />
+      <created>1743102979359</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743102979359</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GG_0" />
-    <option name="LAST_COMMIT_MESSAGE" value="GG_0" />
+    <MESSAGE value="GG_0.0.1 - Micro fix .js" />
+    <option name="LAST_COMMIT_MESSAGE" value="GG_0.0.1 - Micro fix .js" />
   </component>
 </project>
