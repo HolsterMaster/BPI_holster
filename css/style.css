@@ -44,9 +44,11 @@ nav ul {
 }
 nav a {
     font-weight: 600;
-    padding: 8px 12px;
+    padding: 8px 18px;
     font-size: 18px;
     transition: background 0.3s;
+    background: rgba(51, 51, 51, 0.3);
+    border-radius: 10px;
 }
 nav a:hover {
     background: #333;
@@ -92,26 +94,62 @@ h1, h3 {
 }
 p { max-width: 800px; margin: 0 auto 20px; }
 #hero {
-    background: url('https://avatars.mds.yandex.net/get-vthumb/2757750/5675b8b053a372e8c091f4caf9d0abd6/orig') center/cover no-repeat;
-    display: flex; align-items: center; justify-content: center;
+    background:
+            linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.5)),
+            url('../img/img_ignore/heroTEST.png') center top / cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
     position: relative;
     color: #fff;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-    height: 100vh;
 }
-#hero::after {
-    content: '';
-    position: absolute; top:0; left:0; width:100%; height:100%;
-    background: rgba(0, 0, 0, 0.45);
+
+#about {
+    background-color: var(--color-about-bg);
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: #47573a 0 0 30px;
 }
-#about { background-color: var(--color-about-bg); }
+#about ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: left;
+}
 #texts { background-color: var(--color-texts-bg); }
 #gallery { background-color: var(--color-gallery-bg); }
 
-#hero .content { position: relative; z-index: 1; text-align: center; }
-#hero h1 { font-size: 3.1rem; margin-bottom: 10px; }
-#hero p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.9)
+#hero .content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
 }
+
+#hero h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    margin-bottom: 0.1em;
+    text-shadow: #47573a 5px  6px;
+}
+#hero p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-shadow: #47573a 3px  3px;;
+}
+
+.divider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background: #47573a;
+}
+
 .cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 20px; }
 .card {
     background: #1e1e1e;
@@ -141,32 +179,62 @@ p { max-width: 800px; margin: 0 auto 20px; }
 .modal.active { display: flex; }
 .modal-content {
     background: #1f1f1f;
-    padding: 20px;
     border-radius: 12px;
-    width: 90vw;
-    max-width: 800px;
-    max-height: 90vh;
     overflow: hidden;
     color: #e0e0e0;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    box-shadow: 0 8px 20px rgba(71, 87, 58, 0.6);
     animation: popup 0.2s ease-out;
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .modal-close {
     position: absolute; top: 10px; right: 10px;
     width: 30px; height: 30px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.2rem; cursor: pointer;
-    color: #ff0000;
-    background: rgba(255, 109, 109, 0.15);
-    border-radius: 50%;
+    color: #989898;
+    background: rgba(136, 67, 61, 0.35);
+    border-radius: 30%;
 }
+
 .modal-content img {
-    width: 100%; height: auto; object-fit: contain;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    max-height: calc(90vh - 100px);
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
-.modal-content .description { font-size: 1rem; color: #ccc; }
-@keyframes popup { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-footer { text-align: center; padding: 20px; background: #181818; border-top: 1px solid #333; }
+
+.modal-content .description {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1rem;
+    background: #2a2a2a;
+    width: 100%;
+    color: #ccc;
+}
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+        transform-origin: 0% 50%;
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: 0% 50%;
+    }
+}
+footer { text-align: center; padding: 6px; background: #181818; border-top: 1px solid #333; }

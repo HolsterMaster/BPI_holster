@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_0.0.1 - Micro fix .js">
+    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_0.7 - The code is written (comment: damn, it was a real speedrun cos I'm a lazy ass, lol)">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
@@ -61,6 +63,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\PhpstormProjects\BPI_Website\img\img_ignore" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +89,9 @@
       <workItem from="1743102799963" duration="799000" />
       <workItem from="1743425133115" duration="38000" />
       <workItem from="1743425396016" duration="116000" />
-      <workItem from="1745259527706" duration="8571000" />
+      <workItem from="1745259527706" duration="8868000" />
+      <workItem from="1745862279635" duration="53000" />
+      <workItem from="1745864670906" duration="11190000" />
     </task>
     <task id="LOCAL-00001" summary="GG_0">
       <option name="closed" value="true" />
@@ -108,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743102979359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GG_0.7 - The code is written (comment: damn, it was a real speedrun cos I'm a lazy ass, lol)">
+      <option name="closed" value="true" />
+      <created>1745268503822</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745268503822</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GG_0" />
     <MESSAGE value="GG_0.0.1 - Micro fix .js" />
-    <option name="LAST_COMMIT_MESSAGE" value="GG_0.0.1 - Micro fix .js" />
+    <MESSAGE value="GG_0.7 - The code is written (comment: damn, it was a real speedrun cos I'm a lazy ass, lol)" />
+    <option name="LAST_COMMIT_MESSAGE" value="GG_0.7 - The code is written (comment: damn, it was a real speedrun cos I'm a lazy ass, lol)" />
   </component>
 </project>

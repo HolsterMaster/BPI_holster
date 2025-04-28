@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klasse BPI‑b (10. Klasse)</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
     <nav>
-        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <div class="logo"><img src="img/logoC.png" alt="Logo"></div>
         <ul>
             <li><a href="#about">Über uns</a></li>
             <li><a href="#texts">Unsere Texte</a></li>
@@ -24,14 +24,35 @@
             <h1>Willkommen bei BPI‑b!</h1>
             <p>10. Klasse in der Schweiz – lerne unser Schulleben kennen.</p>
         </div>
+        <div class="divider"></div>
     </section>
     <section id="about">
-        <h2>Über uns</h2>
-        <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto der Klasse" style="border-radius:50%;width:200px;height:200px;object-fit:cover;margin:20px auto;display:block;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <h2>< Über uns ></h2>
+        <img src="img/logoN.png" alt="Foto der Klasse" style="border-radius:50%; width:200px; height:200px; object-fit:cover; margin:20px auto; display:block;">
+
+        <h3>Warum gibt es BPI?</h3>
+        <p>BPI ist für Jugendliche gedacht, die noch nicht so gut Deutsch sprechen können, damit sie sich auf eine Lehre vorbereiten können.</p>
+
+        <h3>Wie funktioniert BPI?</h3>
+        <ul>
+            <li>BPI ist eine Brücke zwischen der Schule im Heimatland und der Schule in der Schweiz.</li>
+            <li>Hier lernt man die wichtigen Dinge, die man für eine Lehre benötigt.</li>
+            <li>Wie alle Schulen in der Schweiz organisiert auch BPI Ausflüge, Schulprojekte und Ferien.</li>
+            <li>Man darf zwei Jahre in dieser Schule lernen, aber manche brauchen nur ein Jahr – je nachdem, wie schnell man genug Deutsch lernt.</li>
+        </ul>
+
+        <h3>Was lernt man im BPI?</h3>
+        <ul>
+            <li>Vor allem lernt man Deutsch und Mathematik.</li>
+            <li>Man lernt handwerkliche Fähigkeiten, z.B. Arbeiten in der Werkstatt oder Zeichnen mit Linien.</li>
+            <li>Man lernt, wie man eine Schnupperlehre oder eine Lehrstelle findet.</li>
+            <li>Man übt, bei Veranstaltungen zu sprechen und Smalltalk zu führen.</li>
+            <li>Zusätzlich lernt man wichtige Regeln, Geografie und weitere Kenntnisse über die Schweiz.</li>
+        </ul>
     </section>
+
     <section id="texts">
-        <h2>Unsere Texte</h2>
+        <h2>< Unsere Texte ></h2>
         <div class="cards">
             <div class="card">
                 <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Text 1">
@@ -57,36 +78,9 @@
         </div>
     </section>
     <section id="gallery">
-        <h2>Galerie</h2>
-        <div class="cards">
-            <div class="card photo-card" data-description="Erste Aufnahme des Jahres">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 1">
-                <div class="card-body"><p class="desc">Erste Aufnahme...</p></div>
-            </div>
-            <div class="card photo-card" data-description="Winterausflug im Schnee">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 2">
-                <div class="card-body"><p class="desc">Winterausflug...</p></div>
-            </div>
-            <div class="card photo-card" data-description="Sommerfest Erinnerung">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 3">
-                <div class="card-body"><p class="desc">Sommerfest Er...</p></div>
-            </div>
-            <div class="card photo-card" data-description="Letzter Schultag">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
-                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
-            </div>
-            <div class="card photo-card" data-description="Letzter Schultag">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
-                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
-            </div>
-            <div class="card photo-card" data-description="Letzter Schultag">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
-                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
-            </div>
-            <div class="card photo-card" data-description="Letzter Schultag">
-                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="Foto 4">
-                <div class="card-body"><p class="desc">Letzter Schultag</p></div>
-            </div>
+        <h2>< Galerie ></h2>
+        <div class="cards" id="gallery-container">
+            <!-- auto generated shit. Needs optimisation(thumbs) -->
         </div>
     </section>
 </main>
@@ -98,7 +92,7 @@
     </div>
 </div>
 <footer>
-    <p>© 2025 Klasse BPI‑b. Alle Rechte vorbehalten.</p>
+    <p>© 2025 Klasse BPI‑b Website by KITMAVV</p>
 </footer>
 <script src="/js/script.js"></script>
 </body>
