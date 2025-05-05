@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,10 +10,10 @@
 <body>
 <header>
     <nav>
-        <div class="logo"><img src="img/logoC.png" alt="Logo"></div>
+        <div class="logo"><img src="img/logoC.png" alt="Logo" draggable="false"></div>
         <ul>
             <li><a href="#about">Über uns</a></li>
-            <li><a href="#texts">Unsere Texte</a></li>
+            <li><a href="#texts">Geschichte</a></li>
             <li><a href="#gallery">Galerie</a></li>
         </ul>
     </nav>
@@ -33,24 +32,28 @@
         <img src="img/logoN.png" alt="Foto der Klasse" style="border-radius:50%; width:200px; height:200px; object-fit:cover; margin:20px auto; display:block;">
 
         <h3>Warum gibt es BPI?</h3>
-        <p>BPI ist für Jugendliche gedacht, die noch nicht so gut Deutsch sprechen können, damit sie sich auf eine Lehre vorbereiten können.</p>
+        <p>
+            BPI richtet sich an Jugendliche, die noch nicht ausreichend Deutsch sprechen,
+            und bereitet sie gezielt auf eine Lehre vor.
+        </p>
 
         <h3>Wie funktioniert BPI?</h3>
         <ul>
             <li>BPI ist eine Brücke zwischen der Schule im Heimatland und der Schule in der Schweiz.</li>
-            <li>Hier lernt man die wichtigen Dinge, die man für eine Lehre benötigt.</li>
-            <li>Wie alle Schulen in der Schweiz organisiert auch BPI Ausflüge, Schulprojekte und Ferien.</li>
-            <li>Man darf zwei Jahre in dieser Schule lernen, aber manche brauchen nur ein Jahr – je nachdem, wie schnell man genug Deutsch lernt.</li>
+            <li>Hier lernt man alle wichtigen Inhalte, die man für eine Berufsausbildung benötigt.</li>
+            <li>Wie alle Schweizer Schulen organisiert auch das BPI Ausflüge, Schulprojekte und Exkursionen.</li>
+            <li>Man kann bis zu zwei Jahre am BPI lernen; manche benötigen jedoch nur ein Jahr, je nachdem, wie schnell sie Deutschkenntnisse erwerben.</li>
         </ul>
 
         <h3>Was lernt man im BPI?</h3>
         <ul>
-            <li>Vor allem lernt man Deutsch und Mathematik.</li>
-            <li>Man lernt handwerkliche Fähigkeiten, z.B. Arbeiten in der Werkstatt oder Zeichnen mit Linien.</li>
-            <li>Man lernt, wie man eine Schnupperlehre oder eine Lehrstelle findet.</li>
-            <li>Man übt, bei Veranstaltungen zu sprechen und Smalltalk zu führen.</li>
-            <li>Zusätzlich lernt man wichtige Regeln, Geografie und weitere Kenntnisse über die Schweiz.</li>
+            <li>Vertiefung in Deutsch und Mathematik.</li>
+            <li>Praktische Fertigkeiten, z. B. Arbeiten in der Werkstatt und technisches Zeichnen.</li>
+            <li>Anleitung, wie man eine Schnupperlehre absolviert und eine Lehrstelle findet.</li>
+            <li>Sprech- und Smalltalk-Training bei schulischen Veranstaltungen.</li>
+            <li>Wichtige Kenntnisse über Schweizer Regeln, Geografie und Kultur.</li>
         </ul>
+
     </section>
 
     <section id="texts">
@@ -61,7 +64,7 @@
     <section id="gallery">
         <h2>< Galerie ></h2>
         <div class="cards" id="gallery-container">
-
+            <!-- .js -->
         </div>
     </section>
 </main>
@@ -75,8 +78,12 @@
 </div>
 
 <footer>
-    <p>© 2025 Klasse BPI-b Website by KITMAVV</p>
+    <p>
+        © 2025 Klasse BPI-b Website by
+        <span id="kitmavv" style="cursor: pointer;">KITMAVV</span>
+    </p>
 </footer>
+
 
 <script src="js/script.js"></script>
 </body>
