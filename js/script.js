@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina" },
         { src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn" },
         { src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Bergen -_-" },
-        { src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "Farid😘" },
+        { src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘" },
         { src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Herren und Schnee" },
         { src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf" },
         { src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1", desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden" },
@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Golf." },
         { src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~" },
         { src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Leute stehen(Spitznamenklicks 11)" },
-        { src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)" }
+        { src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)" },
+        { src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark" },
     ];
 
     const galleryContainer = document.getElementById('gallery-container');
@@ -150,7 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
             img: 'img/img_ignore/animals/Pferd.png',
             category: 'Tier'
         },
-
+        {
+            title: 'Fuchshai',
+            text: 'Fuchshaie leben meistens im östlichen Pazifischen Ozean. Sie halten sich in etwa 550 Meter Tiefe auf, weil sie das besser finden. Diese Haie sind Wildtiere, sehr scheu und mögen Menschen nicht. Fuchshaie fressen vor allem pelagische Fischschwärme, zum Beispiel Blaufische, junge Tunfische und Makrelen. Gelegentlich fressen sie auch Tintenfische, Krustentiere oder Seevögel. Dabei benutzen sie ihre langen Schwänze wie eine Peitsche, um ihre Beute zu treffen. Zur Familie der Alopiidae gehörend, haben Fuchshaie ihren Namen von den langen Schwänzen und dem griechischen Wort für „Fuchs“. Ein gesunder Fuchshai ist ungefähr 6,1 Meter lang und wiegt etwa 500 Kilogramm. Ich liebe Fuchshaie, weil sie sehr süß aussehen. Sie sind sehr interessante Fische und ihre Schwänze finde ich ein bisschen lustig. Fuchshai und ich sind beide scheu, wir essen gerne Fisch und wir schwimmen gerne. Fuchshaie sind meine Lieblingstiere. Einzig ihr Maul mag ich nicht so gern, weil es ständig traurig aussieht.',
+            img: 'img/img_ignore/animals/fuchshai.png',
+            category: 'Tier'
+        },
 
 
         {
@@ -162,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'Ausflug in den Seilpark',
             text: 'Es war mein erster Ausflug in meiner ganzen Schulzeit und ich wusste gar nicht wie es geht oder was ein Seilpark ist. Aber wir waren mit der ganzen Schule dort und sind hoch in die Berge gefahren. Das war sehr interessant für mich und wir hatten viel Spass zusammen. Wir haben dort ein paar Fotos gemacht.',
-            img: 'img/img_ignore/texte-frei/seil.jpg',
+            img: 'img/img_ignore/texte-frei/EliundUsma_t.jpg',
             category: 'Schule'
         },
         {
@@ -273,6 +279,42 @@ document.addEventListener('DOMContentLoaded', function() {
                     : full;
             }
         });
+
+    const btn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (btn && mobileMenu) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            btn.classList.toggle('open');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            const isClickInside = btn.contains(e.target) ||
+                mobileMenu.contains(e.target);
+            if (!isClickInside) {
+                btn.classList.remove('open');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+
+    const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+    const DEAD_ZONE = 10;
+
+    window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+
+        if (currentY - lastScrollY > DEAD_ZONE) {
+            header.classList.add('hide');
+        } else if (lastScrollY - currentY > DEAD_ZONE || currentY < 50) {
+            header.classList.remove('hide');
+        }
+
+        lastScrollY = currentY;
+    });
 
     const idk = 'https://youtu.be/nM6Ztsn8Z7g';
     let kitmavvClicks = 0;
