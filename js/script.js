@@ -15,9 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    document.querySelector('.logo img').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+
+    const logoImg = document.querySelector('.logo img');
+    if (logoImg) {
+        logoImg.addEventListener('click', e => {
+            e.preventDefault();
+            history.pushState(
+                '',
+                document.title,
+                window.location.pathname + window.location.search
+            );
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
 
 
     document.querySelectorAll('.modal-close')
