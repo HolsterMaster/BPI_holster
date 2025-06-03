@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap');
-
-
 /* ------------------------------ */
 /* 1. Custom properties (variables) */
 /* ------------------------------ */
 :root {
     --color-about-bg: #1a1a1a;
-    --color-texts-bg: #151515;
-    --color-gallery-bg: #0e0e0e;
+    --color-texts-bg: #0e0e0e;
+    --color-gallery-bg: #151515;
 }
 
 /* ------------------------------ */
@@ -50,13 +47,15 @@ img {
 /* ------------------------------ */
 header {
     position: fixed;
-    top: 0; left: 0; width: 100%;
-    background: rgba(18, 18, 18, 0.97);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: radial-gradient(circle, rgba(18, 18, 18, 0.98) 0%, rgb(31, 17, 18) 99%);
     border-bottom: 1px solid #333;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     z-index: 1000;
     height: 80px;
-    transition:transform .35s ease-in-out;
+    transition: transform .35s ease-in-out;
 }
 
 header.hide {
@@ -156,6 +155,7 @@ section h2 {
     text-align: center;
     margin: 0 auto 40px;
     display: table;
+    cursor: default;
     border-bottom: 3px solid #e0e0e0;
     padding-bottom: 8px;
 }
@@ -163,7 +163,8 @@ section h2 {
 h1, h3 {
     margin-bottom: 20px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
 }
 
 p {
@@ -172,26 +173,59 @@ p {
 }
 
 /* ------------------------------ */
-/* 6. Hero section                */
+/* 6. Hero section (исправленный) */
 /* ------------------------------ */
 #hero {
-    background:
-            linear-gradient(170deg, rgba(44, 4, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0,0,0,0) 100%),
-            url('../img/img_ignore/hero.jpg') center top / cover no-repeat;
+    position: relative;
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     padding: 60px 20px;
-    position: relative;
+}
+
+
+.bg-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            170deg,
+            rgba(73, 9, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.1)    60%,
+            rgba(0, 0, 0, 0)     100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    will-change: transform;
+    width: 110%;
+    height: auto;
+    animation:
+            scaleBg 5s ease-out forwards,
+            panBg   35s ease-in-out 5s infinite alternate;
 }
 
 #hero .content {
     margin-top: 55px;
     margin-left: 20px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 1300px;
     padding: 2rem 1rem;
 }
@@ -206,6 +240,13 @@ p {
     color: #f2f5f2;
     text-shadow: 0 4px 8px rgba(117, 0, 0, 0.8);
     margin: 0 0 .25em;
+    cursor: default;
+    transition: scale 0.5s;
+    animation: slideUpFade 1.7s cubic-bezier(.25, .8, .25, 1) both;
+}
+
+#hero h1:hover {
+    scale: 1.03;
 }
 
 #hero p {
@@ -213,9 +254,11 @@ p {
     font-size: clamp(1rem, 2.6vw, 1.4rem);
     line-height: 1.55;
     max-width: 40ch;
+    cursor: default;
     margin: 1.2em 1em 0;
     color: #ffffff;
-    text-shadow: 0 3px 6px rgba(0,0,0,.6);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .6);
+    animation: slideUpFade .7s .5s cubic-bezier(.25, .8, .25, 1) both;
 }
 
 .accent {
@@ -223,23 +266,41 @@ p {
 }
 
 @keyframes slideUpFade {
-    from { opacity: 0; transform: translateY(90px); }
-    to   { opacity: 1; transform: translateY(0);    }
+    from {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-#hero h1 {
-    animation: slideUpFade 1.7s cubic-bezier(.25,.8,.25,1) both;
+@keyframes scaleBg {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.1) translateX(3%);
+    }
 }
 
-#hero p {
-    animation: slideUpFade .7s .5s cubic-bezier(.25,.8,.25,1) both;
+@keyframes panBg {
+    from {
+        transform: translate(-50%, -50%) scale(1.1) translateX(3%);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.1) translateX(-3%);
+    }
 }
+
 
 .divider {
     width: 100%;
     height: 9px;
     background: #47573a;
 }
+
 
 /* ------------------------------ */
 /* 7. About section               */
@@ -254,15 +315,24 @@ p {
 
 #about ul {
     list-style-position: inside;
-    padding-left: 0;
-    margin: 40px 0;
+    padding: 20px;
+    margin: 20px 0;
     text-align: left;
     font-size: 1rem;
 }
 
+#about p {
+    padding: 20px;
+
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
 .roundLogo {
     border-radius: 50%;
-    width: 200px; height: 200px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     margin: 20px auto;
     display: block;
@@ -300,7 +370,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
-    max-height: 1.2em;
+    max-height: 1.6em;
     transition: max-height 0.5s ease;
 }
 
@@ -309,7 +379,7 @@ p {
     background-color: #474747;
     padding: 5px;
     border-radius: 4px;
-    max-height: 500px;
+    max-height: 1500px;
 }
 
 /* ------------------------------ */
@@ -332,10 +402,11 @@ p {
 .card {
     background: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     transition: transform 0.3s, background-color 0.5s;
 }
 
@@ -346,7 +417,7 @@ p {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 
@@ -380,9 +451,11 @@ p {
 /* ------------------------------ */
 .modal {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     display: none;
     align-items: center;
     justify-content: center;
@@ -400,8 +473,8 @@ p {
     color: #e0e0e0;
     position: relative;
     box-shadow: 0 8px 20px rgba(71, 87, 58, 0.6);
-    -webkit-animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25,.46,.45,.94) both;
-    animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25,.46,.45,.94) both;
+    -webkit-animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25, .46, .45, .94) both;
     max-width: 90vw;
     max-height: 90vh;
     padding: 0;
@@ -412,8 +485,10 @@ p {
 
 .modal-close {
     position: absolute;
-    top: 10px; right: 10px;
-    width: 30px; height: 30px;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -481,10 +556,63 @@ p {
 /* 12. Footer                     */
 /* ------------------------------ */
 footer {
+    display: flex;
     text-align: center;
     padding: 6px;
+    align-items: center;
     background: #181818;
     border-top: 1px solid #333;
+    flex-wrap: wrap;
+}
+
+
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+
+.svgIcon {
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.Btn:hover {
+    background-color: #505050;
+    width: 90px;
+    transition-duration: .4s;
+    border-radius: 30px;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
 }
 
 /* ------------------------------ */
@@ -531,16 +659,16 @@ footer {
     position: absolute;
     top: 80px;
     right: 20px;
-    background: rgba(34, 34, 34, 0.8);
+    background: rgba(34, 34, 34, 0.93);
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #555;
     border-radius: 4px;
     z-index: 1000;
     transition: max-height 0.3s ease;
 }
 
 .mobile-menu.active {
+    border: 1px solid #555;
     max-height: 300px;
 }
 
@@ -583,7 +711,7 @@ a:focus,
 a:active,
 button:focus,
 button:active {
-    outline: none;
+    outline: 2px solid rgba(209, 178, 178, 0.5);
     -webkit-tap-highlight-color: transparent;
     tap-highlight-color: transparent;
 }
@@ -616,6 +744,7 @@ button:active {
     .logo img {
         height: 30px;
     }
+
     nav a {
         font-size: 0.85rem;
         padding: 6px 8px;
@@ -652,9 +781,11 @@ button:active {
     header {
         height: 75px;
     }
+
     .logo img {
         height: 45px;
     }
+
     nav a {
         font-size: 0.70rem;
         padding: 6px 8px;
@@ -696,14 +827,24 @@ button:active {
     /* 6. Hero section                */
     /* ------------------------------ */
     #hero {
-        background:
-                linear-gradient(180deg, rgba(255, 23, 0, 0.53) 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0,0,0,0) 100%),
-                url('../img/img_ignore/hero-mobile.jpeg') center center / cover no-repeat;
+        background: linear-gradient(180deg, rgba(255, 23, 0, 0.53) 0%, rgba(0, 0, 0, 0.3) 22%, rgba(0, 0, 0, 0) 100%),
+        url('../img/img_ignore/hero-mobile.jpeg') center center / cover no-repeat;
 
         justify-content: center;
         align-items: center;
-        min-height: 100px;
-        height: 750px;
+        min-height: 80vh;
+
+    }
+    .bg-wrapper {
+        display: none;
+    }
+    .bg-img {
+        display: none;
+        animation: none;
+    }
+    #hero::after {
+        display: none;
+        content: none;
     }
     #hero h1 {
         font-size: 2.6em;

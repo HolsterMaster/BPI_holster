@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     function openModal(imgSrc, description) {
         const modal = document.getElementById('modal');
@@ -15,16 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
     const logoImg = document.querySelector('.logo img');
     if (logoImg) {
         logoImg.addEventListener('click', e => {
             e.preventDefault();
-            history.pushState(
-                '',
-                document.title,
-                window.location.pathname + window.location.search
-            );
+            if (window.location.hash) {
+                history.pushState('', document.title, window.location.pathname + window.location.search);
+            }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
@@ -34,27 +31,39 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.modal-close')
         .forEach(btn => btn.addEventListener('click', closeModal));
     document.getElementById('modal')
-        .addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
-
+        .addEventListener('click', e => {
+            if (e.target === e.currentTarget) closeModal();
+        });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('modal');
+            if (modal.classList.contains('active')) {
+                closeModal();
+            }
+        }
+    });
 
     const images = [
-        { src: "img/img_ignore/SchulePics/EliAti.jpeg?v=1", desc: "Zwei Herren in den Bergen" },
-        { src: "img/img_ignore/SchulePics/Almount.jpeg?v=1", desc: "Winterausflug Alina" },
-        { src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina" },
-        { src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn" },
-        { src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Bergen -_-" },
-        { src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘" },
-        { src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Herren und Schnee" },
-        { src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf" },
-        { src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1", desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden" },
-        { src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳" },
-        { src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳" },
-        { src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "Hey, was machst du? Spaß, Spaß" },
-        { src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Golf." },
-        { src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~" },
-        { src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Leute stehen(Spitznamenklicks 11)" },
-        { src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)" },
-        { src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark" },
+        {src: "img/img_ignore/SchulePics/EliAti.jpeg?v=1", desc: "Zwei Herren in den Bergen"},
+        {src: "img/img_ignore/SchulePics/Almount.jpeg?v=1", desc: "Winterausflug Alina"},
+        {src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina"},
+        {src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn"},
+        {src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Bergen -_-"},
+        {src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘"},
+        {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Herren und Schnee"},
+        {src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf"},
+        {
+            src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1",
+            desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden"
+        },
+        {src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳"},
+        {src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳"},
+        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "Hey, was machst du? Spaß, Spaß"},
+        {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Golf."},
+        {src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~"},
+        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Leute stehen"},
+        {src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)"},
+        {src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark"},
     ];
 
     const galleryContainer = document.getElementById('gallery-container');
@@ -64,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const [fullPath] = img.src.split('?');
         const filename = fullPath.substring(fullPath.lastIndexOf('/') + 1);
         const thumbName = filename.replace(/(\.\w+)$/, '_t$1');
-        const thumbSrc  = `img/img_ignore/thumbnails/${thumbName}`;
+        const thumbSrc = `img/img_ignore/thumbnails/${thumbName}`;
 
         const card = document.createElement('div');
         card.className = 'card photo-card';
@@ -89,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
     galleryContainer.appendChild(fragment);
 
     galleryContainer.addEventListener('click', e => {
-        const imgEl = e.target.closest('.photo-card img');
+        const cardEl = e.target.closest('.photo-card');
+        if (!cardEl) return;
+        const imgEl = cardEl.querySelector('img.thumb-img');
         if (!imgEl) return;
-        openModal(imgEl.dataset.fullsrc, imgEl.closest('.photo-card').dataset.description);
+        openModal(imgEl.dataset.fullsrc, cardEl.dataset.description);
     });
 
 
@@ -202,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
 
-
         {
             title: 'Zukunft',
             text: 'Ich versuche es, eine gute Zukunft zu haben. Wenn jemand keinen Traum hat, kann er gar nicht aufstehen. Du musst kämpfen, um zu überleben und du musst stark sein, um zu kämpfen. Einfach musst du daran bleiben und du musst nicht aufgeben.',
@@ -216,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
             img: 'img/img_ignore/texte-frei/gamer.jpg',
             category: 'Frei Texte'
         },
-
 
 
         // {
@@ -295,13 +304,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
 
     if (btn && mobileMenu) {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             e.stopPropagation();
             btn.classList.toggle('open');
             mobileMenu.classList.toggle('active');
         });
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             const isClickInside = btn.contains(e.target) ||
                 mobileMenu.contains(e.target);
             if (!isClickInside) {
@@ -313,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const header = document.querySelector('header');
     let lastScrollY = window.scrollY;
-    const DEAD_ZONE = 10;
+    const DEAD_ZONE = 15;
 
     window.addEventListener('scroll', () => {
         const currentY = window.scrollY;
@@ -327,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollY = currentY;
     });
 
-    const idk = 'https://youtu.be/nM6Ztsn8Z7g';
+    const idk = 'https://youtu.be/O9URqxy_9Lo?si=GOJBDHgEJs8o4ENr';
     let kitmavvClicks = 0;
     const kitmavvEl = document.getElementById('kitmavv');
     if (kitmavvEl) {
