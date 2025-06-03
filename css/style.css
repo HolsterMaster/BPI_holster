@@ -616,7 +616,7 @@ footer {
 }
 
 /* ------------------------------ */
-/* 13. Menu                       */
+/* 13. Menu mobile                */
 /* ------------------------------ */
 .menu-btn {
     display: none;
@@ -715,6 +715,22 @@ button:active {
     -webkit-tap-highlight-color: transparent;
     tap-highlight-color: transparent;
 }
+
+
+.logo img,
+.card,
+.text-card,
+.photo-card {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+
+.logo img:focus,
+.card:focus {
+    outline: none;
+}
+
 
 /* ------------------------------ */
 /* 14. Media Queries              */
