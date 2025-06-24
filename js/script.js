@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const images = [
-        {src: "img/img_ignore/SchulePics/EliAti.jpeg?v=1", desc: "Zwei Herren in den Bergen"},
+        {src: "img/img_ignore/SchulePics/EliAti.jpeg?v=1", desc: "Zwei Herren in den Bergen am Schneetag"},
         {src: "img/img_ignore/SchulePics/Almount.jpeg?v=1", desc: "Winterausflug Alina"},
         {src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina"},
         {src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn"},
-        {src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Bergen -_-"},
+        {src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Am Niederhorn"},
         {src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘"},
-        {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Herren und Schnee"},
+        {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Beim Schlitten"},
         {src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf"},
         {
             src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1",
@@ -58,12 +58,30 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳"},
         {src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳"},
-        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "Hey, was machst du? Spaß, Spaß"},
-        {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Golf."},
+        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "In das Werkstatt... Spaß, Spaß"},
+        {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Mini-Golf."},
         {src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~"},
-        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Leute stehen"},
+        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Programmierer und Frau Poretti"},
         {src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)"},
         {src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark"},
+
+        {src: "img/img_ignore/SchulePics/atiusMoha.jpg?v=1", desc: "Die Jungs und der Genfersee"},
+        {src: "img/img_ignore/SchulePics/essen.jpg?v=1", desc: "Essen im Klassenzimmer"},
+        {src: "img/img_ignore/SchulePics/essenNoch.jpg?v=1", desc: "Kabuli Palau war sehr lecker"},
+        {src: "img/img_ignore/SchulePics/fari.jpg?v=1", desc: "F.⛸️"},
+        {src: "img/img_ignore/SchulePics/geff.jpg?v=1", desc: "Wir werden bald auf einem Boot segeln!"},
+        {src: "img/img_ignore/SchulePics/genfAll.jpg?v=1", desc: "Gruppenfoto und Genfersee"},
+        {src: "img/img_ignore/SchulePics/GenfJunge.jpg?v=1", desc: "Mehr Jungs und der Genfersee"},
+        {src: "img/img_ignore/SchulePics/lehrere.jpg?v=1", desc: "Lehrerinnen und Mohammad"},
+        {src: "img/img_ignore/SchulePics/mohaUndPil.jpg?v=1", desc: "Frau Pilser und Mohammad"},
+        {src: "img/img_ignore/SchulePics/mrffg.jpg?v=1", desc: "Mariyam✌️"},
+        {src: "img/img_ignore/SchulePics/nochEssen.jpg?v=1", desc: "Mmm, Kabuli Palau~"},
+        {src: "img/img_ignore/SchulePics/samuFi.jpg?v=1", desc: "Fida ist sooo schnell"},
+        {src: "img/img_ignore/SchulePics/schlitSam.jpg?v=1", desc: "Wer ist das Mädchen rechts?🤔"},
+        {src: "img/img_ignore/SchulePics/stuhl.jpg?v=1", desc: "Stuhl ist gekaputtet"},
+        {src: "img/img_ignore/SchulePics/stuhlUndMens.jpg?v=1", desc: "Ein phänomenal großer Stuhl und viele Sonnenbrillen"},
+        {src: "img/img_ignore/SchulePics/UNO.jpg?v=1", desc: "UNO, Gruppenfoto"},
+        {src: "img/img_ignore/SchulePics/zugEli.jpg?v=1", desc: "Lustiges Spiel auf dem Weg nach Genf"}
     ];
 
     const galleryContainer = document.getElementById('gallery-container');
@@ -115,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             title: 'Adler',
-            text: 'Ich bin Mohammad Ali Zadah. Mein Lieblingstier ist die Katze, weil sie freundlich und nett ist. Wenn ich ein Tier sein muss, werde ich Adler wählen. Er lebt auf den Bergen und ist ein Wildtier. Er isst verschiedenes Essen, zum Beispiel Fisch und Fleisch. Er ist gross und wohnt oft allein. Er gefällt mir sehr, weil er fliegen kann und Freiheit hat. Er hat ein bisschen mit mir zu tun (ich bin oft allein und arbeite für mich selbst). Ich mag nicht, wenn er andere Vögel jagt. Ich möchte kein Adler sein, aber wenn ich es sein müsste, würde ich Ja sagen, weil er überall fliegen kann. Ich habe ihn auch in Afghanistan gesehen und Kontakt gehabt. Ich bin auf den Berg gegangen und dort habe ich einen Adler mit seinem Kind gesehen. Ich liebe sein Lebenssystem.',
+            text: 'Ich bin Mohammad. Mein Lieblingstier ist die Katze, weil sie freundlich und nett ist. Wenn ich ein Tier sein muss, werde ich Adler wählen. Er lebt auf den Bergen und ist ein Wildtier. Er isst verschiedenes Essen, zum Beispiel Fisch und Fleisch. Er ist gross und wohnt oft allein. Er gefällt mir sehr, weil er fliegen kann und Freiheit hat. Er hat ein bisschen mit mir zu tun (ich bin oft allein und arbeite für mich selbst). Ich mag nicht, wenn er andere Vögel jagt. Ich möchte kein Adler sein, aber wenn ich es sein müsste, würde ich Ja sagen, weil er überall fliegen kann. Ich habe ihn auch in Afghanistan gesehen und Kontakt gehabt. Ich bin auf den Berg gegangen und dort habe ich einen Adler mit seinem Kind gesehen. Ich liebe sein Lebenssystem.',
             img: 'img/img_ignore/animals/Adler.png',
             category: 'Tier'
         },
@@ -208,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             title: 'Rückblich Schneetag',
             text: 'Am Freitag, den 28. Februar 2025 ging ich mit meiner Klasse schlitteln. Der Zug ist um 8:51 Uhr ab Burgdorf nach Thun / Beatenberg gefahren. Alle Schüler sind mit der Drahtseilbahn und mit dem Sessellift gefahren. Aber es war das erste Mal, dass ich schlitteln war, also war es sehr schwierig, aber es war auch sehr gut und schön. Wir haben dann eine Suppe getrunken und ein Brot gegessen. Wir mussten warme, wetterfeste Kleidung und Schuhe, Handschuhe, Mütze und eine Sonnenbrille tragen. Wir sind im Bahnhof Burgdorf um 17:35 angekommen.',
-            img: 'img/img_ignore/texte-frei/schnee.jpg',
+            img: 'img/img_ignore/texte-frei/schnee.jpeg',
             category: 'Schule'
         },
 
@@ -223,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             title: 'Computerspiele ',
             text: 'Ich beginne mit dem Schreiben über meine Online-Spiele, die ich auf meinem PC und meiner Konsole spiele. Ich liebe es, Spiele zu spielen, weil es einfach ein sehr beliebtes Hobby von mir ist. Ich denke, ich bin wirklich gut darin, besonders wenn ich gerade erst angefangen habe, am PC zu spielen. Insgesamt bin ich aber besser auf der Konsole, und je nach dem, wie viel und wie lange ich spiele, werde ich bald besser sein als je zuvor auf dem PC.',
-            img: 'img/img_ignore/texte-frei/gamer.jpg',
+            img: 'img/img_ignore/texte-frei/gamer.png',
             category: 'Frei Texte'
         },
 

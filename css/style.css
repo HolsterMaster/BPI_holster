@@ -316,7 +316,7 @@ p {
 #about ul {
     list-style-position: inside;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 10px;
     text-align: left;
     font-size: 1rem;
 }
@@ -336,6 +336,11 @@ p {
     object-fit: cover;
     margin: 20px auto;
     display: block;
+    transition: transform 0.6s;
+}
+
+.roundLogo:hover {
+    transform: scale(1.05);
 }
 
 /* ------------------------------ */

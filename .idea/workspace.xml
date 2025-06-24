@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_3.0.0 - Polished (not from Poland-_-)">
+    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_4.0.1 - mobile fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -52,7 +52,7 @@
     &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Downloads/final_project/client&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -104,7 +104,12 @@
       <workItem from="1748897775295" duration="410000" />
       <workItem from="1748898303074" duration="2290000" />
       <workItem from="1748965746053" duration="7956000" />
-      <workItem from="1748974896156" duration="12065000" />
+      <workItem from="1748974896156" duration="12548000" />
+      <workItem from="1748990601743" duration="487000" />
+      <workItem from="1749228347859" duration="23000" />
+      <workItem from="1749477740620" duration="71000" />
+      <workItem from="1749577160847" duration="42000" />
+      <workItem from="1750788660421" duration="9115000" />
     </task>
     <task id="LOCAL-00001" summary="GG_0">
       <option name="closed" value="true" />
@@ -186,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748900594462</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="GG_4.0.0 - show time">
+      <option name="closed" value="true" />
+      <created>1748989106883</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748989106884</updated>
+    </task>
+    <task id="LOCAL-00012" summary="GG_4.0.1 - mobile fix">
+      <option name="closed" value="true" />
+      <created>1748991089031</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748991089031</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +234,8 @@
     <MESSAGE value="GG_1.0.0 - V1 Ready (comment: yippee, I can sleep :3)" />
     <MESSAGE value="GG_2.0.0 - Total update (looks much better!)" />
     <MESSAGE value="GG_3.0.0 - Polished (not from Poland-_-)" />
-    <option name="LAST_COMMIT_MESSAGE" value="GG_3.0.0 - Polished (not from Poland-_-)" />
+    <MESSAGE value="GG_4.0.0 - show time" />
+    <MESSAGE value="GG_4.0.1 - mobile fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="GG_4.0.1 - mobile fix" />
   </component>
 </project>
