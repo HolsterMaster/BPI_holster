@@ -52,29 +52,27 @@ document.addEventListener('DOMContentLoaded', function () {
         {src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘"},
         {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Beim Schlitten"},
         {src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf"},
-        {
-            src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1",
-            desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden"
-        },
+        {src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1", desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden"},
         {src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳"},
         {src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳"},
-        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "In das Werkstatt... Spaß, Spaß"},
+        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "In der Werkstatt..."},
         {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Mini-Golf."},
         {src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~"},
-        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Einige zufällige Programmierer und Frau Poretti"},
+        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Programmierer und Frau Poretti"},
         {src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)"},
         {src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark"},
+        {src: "img/img_ignore/SchulePics/fede.jpg?v=1", desc: "Cooles Foto"},
+        {src: "img/img_ignore/SchulePics/farad.jpg?v=1", desc: "F. nach dem Marathon"},
 
         {src: "img/img_ignore/SchulePics/atiusMoha.jpg?v=1", desc: "Die Jungs und der Genfersee"},
         {src: "img/img_ignore/SchulePics/essen.jpg?v=1", desc: "Essen im Klassenzimmer"},
         {src: "img/img_ignore/SchulePics/essenNoch.jpg?v=1", desc: "Kabuli Palau war sehr lecker"},
         {src: "img/img_ignore/SchulePics/fari.jpg?v=1", desc: "F.⛸️"},
-        {src: "img/img_ignore/SchulePics/geff.jpg?v=1", desc: "Wir werden bald auf einem Boot segeln!"},
+        {src: "img/img_ignore/SchulePics/geff.jpg?v=1", desc: "Wir werden bald mit einem Schiff fahren!"},
         {src: "img/img_ignore/SchulePics/genfAll.jpg?v=1", desc: "Gruppenfoto und Genfersee"},
         {src: "img/img_ignore/SchulePics/GenfJunge.jpg?v=1", desc: "Mehr Jungs und der Genfersee"},
         {src: "img/img_ignore/SchulePics/lehrere.jpg?v=1", desc: "Lehrerinnen und Mohammad"},
         {src: "img/img_ignore/SchulePics/mohaUndPil.jpg?v=1", desc: "Frau Pilser und Mohammad"},
-        {src: "img/img_ignore/SchulePics/mrffg.jpg?v=1", desc: "Mariyam✌️"},
         {src: "img/img_ignore/SchulePics/nochEssen.jpg?v=1", desc: "Mmm, Kabuli Palau~"},
         {src: "img/img_ignore/SchulePics/samuFi.jpg?v=1", desc: "Fida ist sooo schnell"},
         {src: "img/img_ignore/SchulePics/schlitSam.jpg?v=1", desc: "Wer ist das Mädchen rechts?🤔"},
@@ -235,14 +233,14 @@ document.addEventListener('DOMContentLoaded', function () {
             title: 'Zukunft',
             text: 'Ich versuche es, eine gute Zukunft zu haben. Wenn jemand keinen Traum hat, kann er gar nicht aufstehen. Du musst kämpfen, um zu überleben und du musst stark sein, um zu kämpfen. Einfach musst du daran bleiben und du musst nicht aufgeben.',
             img: 'img/img_ignore/texte-frei/zukunft.jpg',
-            category: 'Frei Texte'
+            category: 'Freie Texte'
         },
 
         {
             title: 'Computerspiele ',
             text: 'Ich beginne mit dem Schreiben über meine Online-Spiele, die ich auf meinem PC und meiner Konsole spiele. Ich liebe es, Spiele zu spielen, weil es einfach ein sehr beliebtes Hobby von mir ist. Ich denke, ich bin wirklich gut darin, besonders wenn ich gerade erst angefangen habe, am PC zu spielen. Insgesamt bin ich aber besser auf der Konsole, und je nach dem, wie viel und wie lange ich spiele, werde ich bald besser sein als je zuvor auf dem PC.',
             img: 'img/img_ignore/texte-frei/gamer.png',
-            category: 'Frei Texte'
+            category: 'Freie Texte'
         },
 
 
