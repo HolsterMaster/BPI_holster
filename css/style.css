@@ -173,7 +173,7 @@ p {
 }
 
 /* ------------------------------ */
-/* 6. Hero section (исправленный) */
+/* 6. Hero section */
 /* ------------------------------ */
 #hero {
     position: relative;
@@ -741,12 +741,54 @@ button:active {
 /* ------------------------------ */
 /* 14. Media Queries              */
 /* ------------------------------ */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     /* ------------------------------ */
     /* 4. Header & Navigation        */
     /* ------------------------------ */
     nav ul {
         gap: 40px;
+    }
+    /* ------------------------------ */
+    /* 6. Hero section                */
+    /* ------------------------------ */
+    #hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("../img/img_ignore/hero-mobile.jpeg") center center/cover no-repeat;
+        will-change: transform;
+        animation: panZoomMobile 30s ease-in-out infinite alternate;
+        z-index: 0;
+    }
+
+    #hero::after {
+        display: none;
+        content: none;
+    }
+    .bg-wrapper {
+        display: none;
+    }
+    .bg-img {
+        display: none;
+        animation: none;
+    }
+
+    #hero h1 {
+        font-size: 2.6em;
+        margin-bottom: 0.15em;
+        text-shadow: #6a2a2a 5px 4px;
+    }
+    #hero p {
+        font-size: clamp(0.9rem, 2.6vw, 1.4rem);
     }
 }
 
@@ -756,6 +798,10 @@ button:active {
     /* ------------------------------ */
     nav ul {
         gap: 20px;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
 
@@ -767,10 +813,7 @@ button:active {
         height: 30px;
     }
 
-    nav a {
-        font-size: 0.85rem;
-        padding: 6px 8px;
-    }
+
 }
 
 @media (max-width: 500px) {
@@ -856,37 +899,10 @@ button:active {
         font-size: 0.75em;
     }
 
-    /* ------------------------------ */
-    /* 6. Hero section                */
-    /* ------------------------------ */
-    #hero {
-        background: linear-gradient(180deg, rgba(255, 23, 0, 0.53) 0%, rgba(0, 0, 0, 0.3) 22%, rgba(0, 0, 0, 0) 100%),
-        url('../img/img_ignore/hero-mobile.jpeg') center center / cover no-repeat;
 
-        justify-content: center;
-        align-items: center;
-        min-height: 80vh;
-
-    }
-    .bg-wrapper {
-        display: none;
-    }
-    .bg-img {
-        display: none;
-        animation: none;
-    }
-    #hero::after {
-        display: none;
-        content: none;
-    }
-    #hero h1 {
-        font-size: 2.6em;
-        margin-bottom: 0.15em;
-        text-shadow: #6a2a2a 5px 4px;
-    }
-    #hero p {
-        font-size: clamp(0.9rem, 2.6vw, 1.4rem);
-    }
 }
-
+@keyframes panZoomMobile {
+    0%   { transform: scale(1) }
+    100% { transform: scale(1.1) }
+}
 /*sorted with my king GPT(2x)*/

@@ -44,42 +44,56 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const images = [
+        {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Beim Schlitten"},
         {src: "img/img_ignore/SchulePics/EliAti.jpeg?v=1", desc: "Zwei Herren in den Bergen am Schneetag"},
         {src: "img/img_ignore/SchulePics/Almount.jpeg?v=1", desc: "Winterausflug Alina"},
-        {src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina"},
-        {src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn"},
         {src: "img/img_ignore/SchulePics/Bergen.jpeg?v=1", desc: "Am Niederhorn"},
+        {src: "img/img_ignore/SchulePics/Algolf.jpeg?v=1", desc: "Mini-Golf Alina"},
         {src: "img/img_ignore/SchulePics/Fari.jpeg?v=1", desc: "F.😘"},
-        {src: "img/img_ignore/SchulePics/FiElUs.jpeg?v=1", desc: "Beim Schlitten"},
-        {src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf"},
-        {src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1", desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden"},
-        {src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳"},
-        {src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳"},
-        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "In der Werkstatt..."},
-        {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Mini-Golf."},
-        {src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~"},
-        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Programmierer und Frau Poretti"},
-        {src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)"},
-        {src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark"},
-        {src: "img/img_ignore/SchulePics/fede.jpg?v=1", desc: "Cooles Foto"},
-        {src: "img/img_ignore/SchulePics/farad.jpg?v=1", desc: "F. nach dem Marathon"},
 
-        {src: "img/img_ignore/SchulePics/atiusMoha.jpg?v=1", desc: "Die Jungs und der Genfersee"},
-        {src: "img/img_ignore/SchulePics/essen.jpg?v=1", desc: "Essen im Klassenzimmer"},
-        {src: "img/img_ignore/SchulePics/essenNoch.jpg?v=1", desc: "Kabuli Palau war sehr lecker"},
+
+
+        {src: "img/img_ignore/SchulePics/HerrenUndFrauAebi.jpeg?v=1", desc: "Frau Aebi und Mini-Golf"},
+        {src: "img/img_ignore/SchulePics/MoElUsG.jpeg?v=1", desc: "Wieder Mini-Golf."},
+        {src: "img/img_ignore/SchulePics/GruppenFotoEisbahn.jpeg?v=1", desc: "Ziehen Sie sich warm an, da Sie möglicherweise krank werden"},
+        {src: "img/img_ignore/SchulePics/AtElMoMoj.jpeg?v=1", desc: "Herren und Eisbahn"},
+        {src: "img/img_ignore/SchulePics/Poretti.jpeg?v=1", desc: "Gas Gas Gas! I'm gonna step on the gas~"},
         {src: "img/img_ignore/SchulePics/fari.jpg?v=1", desc: "F.⛸️"},
-        {src: "img/img_ignore/SchulePics/geff.jpg?v=1", desc: "Wir werden bald mit einem Schiff fahren!"},
-        {src: "img/img_ignore/SchulePics/genfAll.jpg?v=1", desc: "Gruppenfoto und Genfersee"},
-        {src: "img/img_ignore/SchulePics/GenfJunge.jpg?v=1", desc: "Mehr Jungs und der Genfersee"},
-        {src: "img/img_ignore/SchulePics/lehrere.jpg?v=1", desc: "Lehrerinnen und Mohammad"},
-        {src: "img/img_ignore/SchulePics/mohaUndPil.jpg?v=1", desc: "Frau Pilser und Mohammad"},
-        {src: "img/img_ignore/SchulePics/nochEssen.jpg?v=1", desc: "Mmm, Kabuli Palau~"},
         {src: "img/img_ignore/SchulePics/samuFi.jpg?v=1", desc: "Fida ist sooo schnell"},
         {src: "img/img_ignore/SchulePics/schlitSam.jpg?v=1", desc: "Wer ist das Mädchen rechts?🤔"},
+
+        {src: "img/img_ignore/SchulePics/Mar.jpeg?v=2", desc: "In der Werkstatt..."},
+        {src: "img/img_ignore/SchulePics/Victoria.jpeg?v=1", desc: "Victoria.jpeg und Ton (nicht .jpeg)"},
+
+        {src: "img/img_ignore/SchulePics/LazyAsf.jpeg?v=1", desc: "Programmierer und Frau Poretti"},
+        {src: "img/img_ignore/SchulePics/GruppenFotoinsMigros.jpeg?v=1", desc: "Migros-Rundgang ⟳"},
+        {src: "img/img_ignore/SchulePics/GruppenFotoVelo.jpeg?v=1", desc: "Sport war auf Fahrrädern ⟳"},
+        {src: "img/img_ignore/SchulePics/EliundUsma.jpg?v=1", desc: "Seilpark"},
+        {src: "img/img_ignore/SchulePics/farad.jpg?v=1", desc: "F. nach dem Marathon"},
+        {src: "img/img_ignore/SchulePics/essen.jpg?v=1", desc: "Essen im Klassenzimmer"},
+        {src: "img/img_ignore/SchulePics/essenNoch.jpg?v=1", desc: "Kabuli Palau war sehr lecker"},
+        {src: "img/img_ignore/SchulePics/nochEssen.jpg?v=1", desc: "Mmm, Kabuli Palau~"},
+
+
+
+
+
+
+        {src: "img/img_ignore/SchulePics/geff.jpg?v=1", desc: "Wir werden bald mit einem Schiff fahren!"},
+        {src: "img/img_ignore/SchulePics/genfAll.jpg?v=1", desc: "Gruppenfoto und Genfersee"},
+        {src: "img/img_ignore/SchulePics/UNO.jpg?v=1", desc: "UNO, Gruppenfoto"},
+        {src: "img/img_ignore/SchulePics/atiusMoha.jpg?v=1", desc: "Die Jungs und der Genfersee"},
+        {src: "img/img_ignore/SchulePics/GenfJunge.jpg?v=1", desc: "Mehr Jungs und der Genfersee"},
+        {src: "img/img_ignore/SchulePics/mohaUndPil.jpg?v=1", desc: "Frau Pilser und Mohammad"},
+        {src: "img/img_ignore/SchulePics/lehrere.jpg?v=1", desc: "Lehrerinnen und Mohammad"},
+
+
+
         {src: "img/img_ignore/SchulePics/stuhl.jpg?v=1", desc: "Stuhl ist gekaputtet"},
         {src: "img/img_ignore/SchulePics/stuhlUndMens.jpg?v=1", desc: "Ein phänomenal großer Stuhl und viele Sonnenbrillen"},
-        {src: "img/img_ignore/SchulePics/UNO.jpg?v=1", desc: "UNO, Gruppenfoto"},
-        {src: "img/img_ignore/SchulePics/zugEli.jpg?v=1", desc: "Lustiges Spiel auf dem Weg nach Genf"}
+
+        {src: "img/img_ignore/SchulePics/zugEli.jpg?v=1", desc: "Lustiges Spiel auf dem Weg nach Genf"},
+        {src: "img/img_ignore/SchulePics/fede.jpg?v=1", desc: "Cooles Foto"}
     ];
 
     const galleryContainer = document.getElementById('gallery-container');

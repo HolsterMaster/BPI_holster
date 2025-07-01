@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_4.2.2 - new photos and minor changes">
+    <list default="true" id="b7a603cd-e118-4a73-a427-b957c2e19c9c" name="Changes" comment="GG_4.2.3 - new photos and minor changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +110,8 @@
       <workItem from="1749577160847" duration="42000" />
       <workItem from="1750788660421" duration="9195000" />
       <workItem from="1750799743225" duration="1277000" />
-      <workItem from="1750883517911" duration="3755000" />
+      <workItem from="1750883517911" duration="4368000" />
+      <workItem from="1751361692496" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="GG_0">
       <option name="closed" value="true" />
@@ -232,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750801022835</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="GG_4.2.3 - new photos and minor changes">
+      <option name="closed" value="true" />
+      <created>1750888055494</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750888055494</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +273,7 @@
     <MESSAGE value="GG_4.2.0 - new photos and minor changes" />
     <MESSAGE value="GG_4.2.1 - new photos and minor changes" />
     <MESSAGE value="GG_4.2.2 - new photos and minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="GG_4.2.2 - new photos and minor changes" />
+    <MESSAGE value="GG_4.2.3 - new photos and minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="GG_4.2.3 - new photos and minor changes" />
   </component>
 </project>
