@@ -766,7 +766,7 @@ button:active {
         inset: 0;
         background: url("../img/img_ignore/hero-mobile.jpeg") center center/cover no-repeat;
         will-change: transform;
-        animation: panZoomMobile 30s ease-in-out infinite alternate;
+        animation: panZoomMobile 25s ease-in-out infinite alternate;
         z-index: 0;
     }
 
