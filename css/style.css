@@ -46,16 +46,18 @@ img {
 /* 4. Header & Navigation         */
 /* ------------------------------ */
 header {
+    --bleed: 16px;
     position: fixed;
-    top: 0;
+    top: calc(-1 * var(--bleed));
     left: 0;
     width: 100%;
+    height: calc(80px + var(--bleed));
+    padding-top: var(--bleed);
     background: radial-gradient(circle, rgba(18, 18, 18, 0.98) 0%, rgb(31, 17, 18) 99%);
     border-bottom: 1px solid #333;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 10px rgba(0,0,0,.7);
     z-index: 1000;
-    height: 80px;
-    transition: transform .35s ease-in-out;
+    transition: transform .45s cubic-bezier(.57,.14,.05,1.4);
 }
 
 header.hide {
@@ -104,7 +106,7 @@ nav a {
     font-weight: 600;
     font-size: 18px;
     position: relative;
-    background: rgba(62, 62, 62, 0.25);
+    background: rgba(62, 62, 62, 0.1);
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms;
     overflow: hidden;
@@ -116,29 +118,31 @@ nav a {
 nav a::before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     border-radius: 15px;
-    background-color: rgba(255, 171, 171, 0.35);
+    background-color: #333333;
     z-index: -1;
-    transition: all 250ms;
+    transition: all .25s;
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 }
 
 nav a:hover {
-    color: #ff9b9b;
-    transform: scale(1.05);
+    color: #ffaaaa;
+    transform: scale(1.1);
+
 }
 
 nav a:hover::before {
-    width: 100%;
+    height: 100%;
 }
 
 nav a:active {
-    background: rgba(104, 30, 30, 0.62);
-    transform: scale(0.95);
+    color: white;
+    background-color: rgba(104, 30, 30, 0.62);
+    transform: scale(1.2);
 }
 
 /* ------------------------------ */
@@ -170,6 +174,7 @@ h1, h3 {
 p {
     max-width: 800px;
     margin: 0 auto 20px;
+
 }
 
 /* ------------------------------ */
@@ -200,9 +205,9 @@ p {
     inset: 0;
     background: linear-gradient(
             170deg,
-            rgba(73, 9, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0.1)    60%,
-            rgba(0, 0, 0, 0)     100%
+            rgba(73, 9, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.1)    55%,
+            rgba(0, 0, 0, 0.1) 100%
     );
     z-index: 1;
     pointer-events: none;
@@ -238,15 +243,16 @@ p {
     letter-spacing: .02em;
     text-transform: uppercase;
     color: #f2f5f2;
-    text-shadow: 0 4px 8px rgba(117, 0, 0, 0.8);
+    text-shadow: -5px 3px 2px rgba(117, 0, 0, 0.8);
     margin: 0 0 .25em;
     cursor: default;
-    transition: scale 0.5s;
+    transition: all 0.5s;
     animation: slideUpFade 1.7s cubic-bezier(.25, .8, .25, 1) both;
 }
 
 #hero h1:hover {
     scale: 1.03;
+    text-shadow: 7px 5px 0 rgba(117, 0, 0, 0.8);
 }
 
 #hero p {
@@ -311,6 +317,7 @@ p {
     margin: 0 auto;
     text-align: left;
     box-shadow: #91ac7b 0 0 30px;
+    border-inline: 1px solid #91ac7b;
 }
 
 #about ul {
@@ -375,7 +382,7 @@ p {
     text-overflow: ellipsis;
     cursor: pointer;
     max-height: 1.6em;
-    transition: max-height 0.5s ease;
+    transition: max-height 1s ease-out;
 }
 
 .text-content.expanded {
@@ -385,6 +392,8 @@ p {
     border-radius: 4px;
     max-height: 1500px;
 }
+
+.text-card-img-faint { opacity: .75; }
 
 /* ------------------------------ */
 /* 9. Gallery section             */
@@ -406,7 +415,8 @@ p {
 .card {
     background: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -476,7 +486,8 @@ p {
     overflow: hidden;
     color: #e0e0e0;
     position: relative;
-    box-shadow: 0 8px 20px rgba(71, 87, 58, 0.6);
+    border: 2px solid #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     -webkit-animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25, .46, .45, .94) both;
     animation: slide-in-elliptic-top-fwd .5s cubic-bezier(.25, .46, .45, .94) both;
     max-width: 90vw;
@@ -785,8 +796,13 @@ button:active {
     #hero h1 {
         font-size: 2.6em;
         margin-bottom: 0.15em;
-        text-shadow: #6a2a2a 5px 4px;
+        text-shadow: #6a2a2a 4px 5px;
     }
+    #hero h1:hover {
+        scale: 1.03;
+        text-shadow: 0 3px 0 #6a2a2a;
+    }
+
     #hero p {
         font-size: clamp(0.9rem, 2.6vw, 1.4rem);
     }
@@ -848,7 +864,8 @@ button:active {
     /* 4. Header & Navigation        */
     /* ------------------------------ */
     header {
-        height: 75px;
+        height: 90px;
+
     }
 
     .logo img {

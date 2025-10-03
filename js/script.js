@@ -296,8 +296,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     card.className = 'card text-card';
                     card.dataset.fulltext = fullText;
 
+                    const imgClass = (t.category === 'Tier') ? 'text-card-img-faint' : '';
+
                     card.innerHTML = `
-                        <img src="${t.img}" alt="${t.title}" loading="lazy" draggable="false">
+                        <img src="${t.img}" alt="${t.title}" loading="lazy" draggable="false" class="${imgClass}">
                         <div class="card-body">
                             <h4>${t.title}</h4>
                             <p class="text-content">${shortText}</p>
